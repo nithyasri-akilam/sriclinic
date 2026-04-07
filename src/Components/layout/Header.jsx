@@ -13,7 +13,7 @@ const Header = ({ handleDrawerToggle, isDarkMode, toggleTheme, drawerWidth }) =>
       sx={{
         width: { sm: `calc(100% - ${drawerWidth}px)` },
         ml: { sm: `${drawerWidth}px` },
-        bgcolor: 'rgba(0, 0, 0, 0.6)',
+        bgcolor: '#1e72a9',
         backdropFilter: 'blur(10px)',
       }}
     >

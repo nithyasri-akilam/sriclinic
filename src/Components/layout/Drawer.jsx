@@ -5,6 +5,7 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { getMenuItems } from './MenuItems';
 import { useState } from 'react';
+import logo from "../../assets/images/sripharmacy.jpg" 
 
 const SideDrawer = ({ handleLogout, isDarkMode, isMobile, setMobileOpen }) => {
   const navigate = useNavigate();
@@ -23,10 +24,10 @@ const SideDrawer = ({ handleLogout, isDarkMode, isMobile, setMobileOpen }) => {
 
   return (
     <Box>
-      <Box sx={{ p: 2, display: 'flex', alignItems: 'center', gap: 1, bgcolor: isDarkMode ? "rgb(39, 39, 39)" : "GrayText" }}>
-        <img src="" alt="ZEAL Logo" style={{ width: 34, height: 33 }} />
+      <Box sx={{ p: 2, display: 'flex', alignItems: 'center', gap: 1, bgcolor: isDarkMode ? "#1e72a9" : "#1e72a9" }}>
+        <img src={logo} alt="Logo" style={{ width: 34, height: 33 }} />
         <Typography variant="h6" sx={{ fontWeight: 'bold', color: "white" }}>
-          ZEAL Travels
+        Sri Clinic
         </Typography>
       </Box>
 
@@ -40,7 +41,7 @@ const SideDrawer = ({ handleLogout, isDarkMode, isMobile, setMobileOpen }) => {
                   selected={location.pathname === item.path}
                   sx={{
                     '&.Mui-selected': {
-                      backgroundColor: '#1976d2',
+                      backgroundColor: '#e02276',
                       color: '#fff',
                       '& .MuiListItemIcon-root': {
                         color: '#fff',
@@ -80,7 +81,7 @@ const SideDrawer = ({ handleLogout, isDarkMode, isMobile, setMobileOpen }) => {
           ))}
         </Box>
 
-        <Divider />
+        {/* <Divider />
 
         <Box>
           <ListItem disablePadding>
@@ -102,7 +103,7 @@ const SideDrawer = ({ handleLogout, isDarkMode, isMobile, setMobileOpen }) => {
               <ListItemText primary="Logout" />
             </ListItemButton>
           </ListItem>
-        </Box>
+        </Box> */}
       </List>
     </Box>
   );

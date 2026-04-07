@@ -1,34 +1,37 @@
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import FlightIcon from '@mui/icons-material/Flight';
-import HotelIcon from '@mui/icons-material/Hotel';
-import LuggageIcon from '@mui/icons-material/Luggage';
-import VisaIcon from '@mui/icons-material/DocumentScanner';
-import TableChartIcon from '@mui/icons-material/TableChart';
-import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
 
+import HomeIcon from "@mui/icons-material/Home";
+import PersonIcon from "@mui/icons-material/Person";
+import AddCircleIcon from "@mui/icons-material/AddCircle";
+import GroupIcon from "@mui/icons-material/Group";
+import HistoryIcon from "@mui/icons-material/History";
+import { PersonPin, TodaySharp } from '@mui/icons-material';
 export const getMenuItems = () => {
   return [
-    { text: 'Dashboard', icon: <DashboardIcon />, path: '/welcomeDashboard' },
-    { 
-      text: 'Flight', 
-      icon: <FlightIcon />, 
-      path: '/superadmin/flight',
-      subMenu: [
-        { 
-          text: 'Airlines', 
-          icon: <AirplanemodeActiveIcon />, 
-          path: '/superadmin/flight/airlines' 
-        },
-        { 
-          text: 'Kingfisher', 
-          icon: <AirplanemodeActiveIcon />, 
-          path: '/superadmin/flight/kingfisher' 
-        }
-      ]
-    },
-    { text: 'Hotel', icon: <HotelIcon />, path: '/superadmin/hotel' },
-    { text: 'Travel', icon: <LuggageIcon />, path: '/superadmin/travel' },
-    { text: 'Visa', icon: <VisaIcon />, path: '/superadmin/visa' },
-    { text: 'Table', icon: <TableChartIcon />, path: '/admin/table' }
+    { text: 'Dashboard', icon: <HomeIcon />, path: '/admin' },
+    { text: 'Today Visitor', icon: <TodaySharp />, path: '/admin/todayvisitor' },
+    { text: 'Patient Page', icon: <PersonIcon />, path: '/admin/CustomerPage' },
+    { text: 'Add New Patient', icon: <AddCircleIcon />, path: '/admin/NewCustomer' },
+    { text: 'Registered Patient', icon: <PersonPin />, path: '/admin/RegMembers' },
+    { text: 'Visitor History', icon: <HistoryIcon />, path: '/admin/VisitorHistory' },
+   
   ];
 };
+
+
+// { 
+    //   text: 'Flight', 
+    //   icon: <FlightIcon />, 
+    //   path: '/superadmin/flight',
+    //   subMenu: [
+    //     { 
+    //       text: 'Airlines', 
+    //       icon: <AirplanemodeActiveIcon />, 
+    //       path: '/superadmin/flight/airlines' 
+    //     },
+    //     { 
+    //       text: 'Kingfisher', 
+    //       icon: <AirplanemodeActiveIcon />, 
+    //       path: '/superadmin/flight/kingfisher' 
+    //     }
+    //   ]
+    // },

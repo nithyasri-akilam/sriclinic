@@ -4,7 +4,7 @@ import { useTheme } from '../theme/ThemeContext';
 import { useTheme as useMuiTheme, useMediaQuery } from '@mui/material';
 import Swal from 'sweetalert2';
 
-const apiUrl = import.meta.env.VITE_API_URL;
+import authService from '../services/authService';
 
 const useLayout = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -28,10 +28,7 @@ const useLayout = () => {
 
     if (result.isConfirmed) {
       try {
-        await fetch(`${apiUrl}/auth/logout`, {
-          method: 'POST',
-          credentials: 'include'
-        });
+        await authService.logout();
         Swal.fire('Logged Out!', 'You have been successfully logged out.', 'success');
         navigate('/login');
       } catch (err) {
