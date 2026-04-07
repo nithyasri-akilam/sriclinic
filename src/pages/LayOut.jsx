@@ -3,7 +3,7 @@ import React from 'react';
 import { Box, Drawer } from '@mui/material';
 import { Outlet } from 'react-router-dom';
 import Footer from './Footer';
-import Header from '../components/layout/Header';
+import Header from '../components/layout/Header.jsx';
 import SideDrawer from '../components/layout/Drawer';
 import useLayout from '../hooks/useLayout';
 
