@@ -3,8 +3,8 @@ import React from 'react';
 import { Box, Drawer } from '@mui/material';
 import { Outlet } from 'react-router-dom';
 import Footer from './Footer';
-import Header from '../components/layout/Header.jsx';
-import SideDrawer from '../components/layout/Drawer';
+import Header from '../Components/layout/Header.jsx';
+import SideDrawer from '../Components/layout/Drawer';
 import useLayout from '../hooks/useLayout';
 
 const drawerWidth = 240;
